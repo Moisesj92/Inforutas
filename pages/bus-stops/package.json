@@ -1,0 +1,30 @@
+{
+  "name": "bus-stops",
+  "version": "0.0.1",
+  "description": "Bus stops",
+  "main": "index.html",
+  "author": "Adrian Obelmejias <obeladrian@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "Bus",
+    "stops"
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "browser": {
+    "angular": "./libs/angular/angular.js"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "angular": {
+      "exports": "angular"
+    }
+  }
+}

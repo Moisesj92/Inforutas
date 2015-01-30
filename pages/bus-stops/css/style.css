@@ -1,0 +1,120 @@
+html, body {
+  height: 100%;
+  background-color: #f9f9f9;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+#nav, #container {
+  padding: 1em;
+  transition: all 100ms linear;
+}
+
+#nav {
+  order: 1;
+  flex: 1;
+  overflow: hidden;
+}
+
+#nav ul {
+  list-style: none;
+  margin-left: -40px;
+}
+
+#container {
+  order: 2;
+  flex: 3;
+}
+
+@media all and (max-width: 768px) {
+  #nav {
+    flex: 0;
+    margin-left: -35px;
+  }
+  #toggle-menu {
+    display: inline-block;
+  }
+}
+
+@media all and (min-width: 768px) {
+ #toggle-menu {
+    display: none;
+  }
+  #nav {
+    flex: 1 !important;
+  }
+  #container {
+    flex: 3 !important;
+  }
+}
+
+#toggle-menu {
+  cursor: pointer;
+  margin-top: 1.4em;
+  margin-bottom: 1.4em;
+}
+
+.closed {
+  flex: 0 !important;
+}
+.closed h1,
+.closed #map-canvas {
+  display: none !important;
+}
+
+.nav-open {
+  flex: 1 !important;
+  margin-left: 0px !important;
+}
+
+#nav ul li {
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 1px 3px #C1C1C1;
+  background-color: #fff;
+  height: 100%;
+  margin: 10px;
+  padding: 15px;
+}
+
+#nav ul li a {
+  text-decoration: none;
+  color: #5C5C5C;
+  cursor: pointer;
+}
+
+#nav ul li a .point {
+  width: 100%;
+  display: inline-block;
+}
+
+#nav ul li a .dots {
+  margin: 5px 0 10px 4px;
+  line-height: 0.4em;
+  display: inline-block;
+}
+
+#nav ul li a .point-b i {
+  color: #F75C50;
+  font-size: 1.4em;
+}
+
+#container h1 {
+  text-align: center;
+  display: inline-block;
+  width: 90%;
+}
+
+#map-canvas {
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 1px 3px #C1C1C1;
+  background-color: #fff;
+  height: 400px;
+  margin: 10px;
+  padding: 15px;
+}

@@ -1,0 +1,80 @@
+/*!
+ * Start Bootstrap - Business Frontpage HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+/* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
+
+
+/* menu amplio */
+.navbar {
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-color: #999;
+    -moz-box-shadow: 0 1px 5px #999;
+    -webkit-box-shadow: 0 1px 5px #999;
+    box-shadow: 0 1px 5px #999;
+}
+
+.navbar-inverse .navbar-brand{
+    color: #000;
+}
+
+.navbar-inverse .navbar-brand:hover {
+    color:  #33ADFF;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #000;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #33ADFF;
+}
+
+/* menu reducido */
+
+.navbar-inverse .navbar-toggle {
+    background-color: #333;
+    border-color: #333;
+}
+
+
+
+
+
+
+/* Login Css */
+
+.mb15 {
+    margin-bottom: 15px;
+}
+
+
+
+/* Customize the text color and shadow color and to optimize text legibility. */
+
+.tagline {
+    text-shadow: 0 0 10px #000;
+    color: #fff;
+}
+
+.img-center {
+    margin: 0 auto;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+.imagen{
+    width: 200px;
+}
+
+.logo {
+    max-height: 400px;
+}

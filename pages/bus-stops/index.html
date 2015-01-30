@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Paradas</title>
+    <link href="../../favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body ng-app="app">
+    <div id="wrapper" ng-controller="AppCtrl">
+      <nav id="nav" role="navigation" ng-class="{'nav-open': showMenu}">
+        <a href="../../index.html"><h2>Info-rutas</h2></a><hr/>
+        <h3>Rutas</h3>
+        <ul>
+          <li ng-repeat="route in routes">
+            <a ng-click="changeRoute(route)">
+              <span class="point"><i class="fa fa-circle-o"></i>&nbsp; {{route.from.name}}</span>
+              <span class="dots">.<br/>.<br/>.<br/></span>
+              <span class="point point-b"><i class="fa fa-map-marker"></i>&nbsp; {{route.to.name}}</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <section id="container" ng-class="{'closed': showMenu}">
+        <a id="toggle-menu" ng-click="toggleMenu()"><i class="fa fa-bars fa-2x"></i></a>
+        <h1><i class="fa fa-bus"></i> </h1>
+        <google-map 
+          zoom="{{zoom}}" 
+          center="{{center}}" 
+          from="{{from}}" 
+          to="{{to}}"
+          waypoints="{{waypoints}}"></google-map>
+      </section>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script type="text/javascript" src="dist/bundle.js"></script>
+  </body>
+</html>
